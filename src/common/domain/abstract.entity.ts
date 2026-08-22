@@ -1,6 +1,6 @@
 import { v7 as uuidv7 } from 'uuid'
 
-import type { PlainObject } from '../types'
+import type { PlainObject } from '@/common/types'
 
 export interface EntityInterface<TProps extends PlainObject = PlainObject> {
   id: string

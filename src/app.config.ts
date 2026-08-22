@@ -1,4 +1,4 @@
-import type { ConfigType } from '@nestjs/config';
+import type { ConfigType } from '@nestjs/config'
 import { registerAs } from '@nestjs/config'
 import { z } from 'zod'
 

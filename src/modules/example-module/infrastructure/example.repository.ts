@@ -8,9 +8,8 @@ import {
   PrismaTransaction,
 } from '@/common/infrastructure/persistence/prisma/prisma.repository'
 import { PrismaService } from '@/common/infrastructure/persistence/prisma/prisma.service'
-
-import { ExampleListOptions } from '../application/use-cases/list-examples.use-case'
-import { ExampleEntity } from '../domain/example.entity'
+import { ExampleListOptions } from '@/modules/example-module/application/use-cases/list-examples.use-case'
+import { ExampleEntity } from '@/modules/example-module/domain/example.entity'
 
 @Injectable()
 export class ExampleRepository

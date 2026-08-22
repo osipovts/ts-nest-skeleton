@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common'
 
-import { ExampleEntity } from '../../domain/example.entity'
-import { ExampleRepository } from '../../infrastructure/example.repository'
-import { ExampleNotFoundException } from '../exceptions/example-not-found.exception'
+import { ExampleNotFoundException } from '@/modules/example-module/application/exceptions/example-not-found.exception'
+import { ExampleEntity } from '@/modules/example-module/domain/example.entity'
+import { ExampleRepository } from '@/modules/example-module/infrastructure/example.repository'
 
 @Injectable()
 export class GetExampleUseCase {

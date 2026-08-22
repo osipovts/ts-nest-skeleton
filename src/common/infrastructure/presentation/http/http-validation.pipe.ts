@@ -1,4 +1,4 @@
-import type { ValidationPipeOptions } from '@nestjs/common';
+import type { ValidationPipeOptions } from '@nestjs/common'
 import { ValidationPipe } from '@nestjs/common'
 
 export class HttpValidationPipe extends ValidationPipe {

@@ -1,7 +1,6 @@
 import { EntityNotFoundException } from '@/common/application/exceptions/entity-not-found.exception'
 import { ModuleEnum } from '@/common/module.enum'
-
-import { ExampleEntity } from '../../domain/example.entity'
+import { ExampleEntity } from '@/modules/example-module/domain/example.entity'
 
 export class ExampleNotFoundException extends EntityNotFoundException {
   public readonly module: ModuleEnum = ModuleEnum.EXAMPLE

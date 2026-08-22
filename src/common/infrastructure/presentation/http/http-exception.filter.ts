@@ -1,8 +1,8 @@
 import { ArgumentsHost, Catch, ExceptionFilter, Logger } from '@nestjs/common'
 import type { Request, Response } from 'express'
 
-import { mapHttpException } from './http-exception.mapper'
-import { ErrorHttpResponseDto } from './http-response.dto'
+import { mapHttpException } from '@/common/infrastructure/presentation/http/http-exception.mapper'
+import { ErrorHttpResponseDto } from '@/common/infrastructure/presentation/http/http-response.dto'
 
 @Catch()
 export class HttpExceptionFilter implements ExceptionFilter {

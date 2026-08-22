@@ -2,8 +2,7 @@ import { ApiProperty } from '@nestjs/swagger'
 
 import { SuccessHttpResponseDto } from '@/common/infrastructure/presentation/http/http-response.dto'
 import { PaginationMetaDto } from '@/common/infrastructure/presentation/http/pagination-response.dto'
-
-import { ExampleEntity } from '../../../domain/example.entity'
+import { ExampleEntity } from '@/modules/example-module/domain/example.entity'
 
 export interface ExamplesListData {
   items: ExampleEntity[]

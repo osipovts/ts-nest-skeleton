@@ -1,9 +1,8 @@
 import { Injectable } from '@nestjs/common'
 
 import type { PaginatedResult, PaginationOptions } from '@/common/application/pagination'
-
-import { ExampleEntity } from '../../domain/example.entity'
-import { ExampleRepository } from '../../infrastructure/example.repository'
+import { ExampleEntity } from '@/modules/example-module/domain/example.entity'
+import { ExampleRepository } from '@/modules/example-module/infrastructure/example.repository'
 
 export enum ExampleSortField {
   ID = 'id',

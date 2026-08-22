@@ -1,9 +1,9 @@
-import js from '@eslint/js';
-import { defineConfig } from 'eslint/config';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
-import prettier from 'eslint-config-prettier';
+import js from '@eslint/js'
+import { defineConfig } from 'eslint/config'
+import prettier from 'eslint-config-prettier'
+import simpleImportSort from 'eslint-plugin-simple-import-sort'
+import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
 export default defineConfig(
   // Игнорируемые директории
@@ -65,10 +65,10 @@ export default defineConfig(
 
     rules: {
       // Использовать:
-      // import type { User } from './user'
+      // import type { User } from '@/modules/user/domain/user.entity'
       //
       // вместо:
-      // import { User } from './user'
+      // import { User } from '@/modules/user/domain/user.entity'
       '@typescript-eslint/consistent-type-imports': [
         'error',
         {
@@ -152,4 +152,4 @@ export default defineConfig(
 
   // отключает конфликтующие правила prettier
   prettier,
-);
+)

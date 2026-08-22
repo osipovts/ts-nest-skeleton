@@ -2,13 +2,12 @@ import { Logger, VersioningType } from '@nestjs/common'
 import { NestFactory } from '@nestjs/core'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
 
+import type { AppConfigType } from '@/app.config'
+import { appConfig } from '@/app.config'
+import { AppModule } from '@/app.module'
 import { HttpExceptionFilter } from '@/common/infrastructure/presentation/http/http-exception.filter'
 import { HttpLoggingInterceptor } from '@/common/infrastructure/presentation/http/http-logging.interceptor'
 import { HttpValidationPipe } from '@/common/infrastructure/presentation/http/http-validation.pipe'
-
-import type { AppConfigType } from './app.config'
-import { appConfig } from './app.config'
-import { AppModule } from './app.module'
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule)

@@ -2,18 +2,17 @@ import { Body, Controller, Delete, Get, Param, Post, Query } from '@nestjs/commo
 import { ApiCreatedResponse, ApiInternalServerErrorResponse, ApiOkResponse } from '@nestjs/swagger'
 
 import { SuccessHttpResponseDto } from '@/common/infrastructure/presentation/http/http-response.dto'
-
-import { CreateExampleUseCase } from '../application/use-cases/create-example.use-case'
-import { DeleteExampleUseCase } from '../application/use-cases/delete.example.use-case'
-import { GetExampleUseCase } from '../application/use-cases/get-example.use-case'
-import { ListExamplesUseCase } from '../application/use-cases/list-examples.use-case'
-import { ExampleEntity } from '../domain/example.entity'
-import { ExampleRequestDto } from './dto/requests/example-request.dto'
-import { ListExamplesRequestDto } from './dto/requests/list-examples-request.dto'
-import { PostExampleRequestDto } from './dto/requests/post-example-request.dto'
-import { ExampleResponseDto } from './dto/responses/example-response.dto'
-import { ExamplesListResponseDto } from './dto/responses/examples-list-response.dto'
-import { ExampleNotFoundResponseDto } from './dto/responses/exceptions/example-not-found-response.dto'
+import { CreateExampleUseCase } from '@/modules/example-module/application/use-cases/create-example.use-case'
+import { DeleteExampleUseCase } from '@/modules/example-module/application/use-cases/delete.example.use-case'
+import { GetExampleUseCase } from '@/modules/example-module/application/use-cases/get-example.use-case'
+import { ListExamplesUseCase } from '@/modules/example-module/application/use-cases/list-examples.use-case'
+import { ExampleEntity } from '@/modules/example-module/domain/example.entity'
+import { ExampleRequestDto } from '@/modules/example-module/presentation/dto/requests/example-request.dto'
+import { ListExamplesRequestDto } from '@/modules/example-module/presentation/dto/requests/list-examples-request.dto'
+import { PostExampleRequestDto } from '@/modules/example-module/presentation/dto/requests/post-example-request.dto'
+import { ExampleResponseDto } from '@/modules/example-module/presentation/dto/responses/example-response.dto'
+import { ExamplesListResponseDto } from '@/modules/example-module/presentation/dto/responses/examples-list-response.dto'
+import { ExampleNotFoundResponseDto } from '@/modules/example-module/presentation/dto/responses/exceptions/example-not-found-response.dto'
 
 @Controller({ path: 'examples', version: '1' })
 export class ExampleHttpController {

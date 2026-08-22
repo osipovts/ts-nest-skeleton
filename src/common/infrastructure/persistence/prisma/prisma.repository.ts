@@ -3,8 +3,7 @@ import { Prisma } from '@prisma-generated/client'
 
 import type { PaginatedResult, PaginationOptions } from '@/common/application/pagination'
 import type { EntityInterface } from '@/common/domain/abstract.entity'
-
-import { DatabaseUnavailableException } from './exceptions/database-unavailable.exception'
+import { DatabaseUnavailableException } from '@/common/infrastructure/persistence/prisma/exceptions/database-unavailable.exception'
 
 export type PrismaTransaction = Prisma.TransactionClient
 export type PrismaClientContext = PrismaClient | PrismaTransaction
