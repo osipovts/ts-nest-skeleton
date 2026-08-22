@@ -8,6 +8,7 @@ import {
   type ExceptionInterface,
   InfrastructureException,
 } from '@/common/exceptions'
+import { DatabaseUnavailableException } from '@/common/infrastructure/persistence/prisma/exceptions/database-unavailable.exception'
 import { LayerEnum } from '@/common/layers.enum'
 import { ModuleEnum } from '@/common/module.enum'
 
@@ -17,6 +18,10 @@ export interface HttpExceptionMapping {
 }
 
 export function mapHttpException(exception: unknown): HttpExceptionMapping {
+  if (exception instanceof DatabaseUnavailableException) {
+    return { status: HttpStatus.SERVICE_UNAVAILABLE, error: exception.toJSON() }
+  }
+
   if (exception instanceof EntityNotFoundException) {
     return { status: HttpStatus.NOT_FOUND, error: exception.toJSON() }
   }
